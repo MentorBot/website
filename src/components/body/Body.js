@@ -18,6 +18,15 @@ class Body extends Component {
 
             <button >REGISTER AS MENTOR</button>
             </div>
+            <div className="bot-images" >
+                <span className="telegram">
+                <a href='#'><img  src={require('../../assets/images/telegram.png')}/></a>
+                <a href='#'><img  src={require('../../assets/images/slack.png')}/></a>
+                <a href='#'><img  src={require('../../assets/images/messenger.jpg')}/></a>
+                <a href='#'><img  src={require('../../assets/images/twitter.png')}/></a>
+                </span>
+   
+            </div>
             </div>
         )
 
