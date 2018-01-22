@@ -1,0 +1,19 @@
+
+ul {
+    margin: 0px;
+    padding: 3% 0 0 0;
+    background-color: #4A649D
+}
+ul >li{
+   list-style: none;
+   /* display: table-cell; */
+   padding: 0 4% 4% 5%;
+   float: right;
+   color: #ffffff;
+   font-family: 'Open Sans Condensed', sans-serif;
+   font-size: 20px;
+   margin: 0px;
+   height: 55px;
+
+   
+}

@@ -1,0 +1,70 @@
+.body1 {
+    float:left;
+    width: 50%;
+    height: 100%;
+    background-color: #4A649D
+}
+.body2 {
+    float:right;
+    width: 50%;
+    height: 100%;
+}
+.body {
+   width: 86.8%;
+   margin-left: 6.6%;
+   height: 1000px;
+}
+
+body {
+    font-family: 'proxima-nova', sans-serif;
+    margin: 0;
+  
+  }
+  
+  html, body, #app, .container {
+    min-height: 100vh;
+    max-height: 100vh;
+    max-width: 100%;
+  }
+  
+  input[type="text"] {
+   border:none;
+   border-top: 1px solid black;
+   width: 100%;
+   text-align: left;
+   font-family: 'Open Sans Condensed', sans-serif;
+   font-size: 20px;
+  } 
+  
+  input[type="text"]:focus {
+    border: none;
+    outline: none !important;
+    border-top: 0.4px solid black;
+  }
+  
+  input[type="submit"] {
+    background-color: #323232;
+    color: white;
+    font: 700 1rem "proxima-nova",sans-serif;
+    border: none;
+    position: relative;
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+    text-decoration: none;
+    padding: 20px 80px;
+    text-align: center;
+    cursor: pointer;
+    -webkit-box-shadow: -7px 7px 0px rgba(50,50,50,0.15);
+    -moz-box-shadow: -7px 7px 0px rgba(50,50,50,0.15);
+    box-shadow: -7px 7px 0px rgba(50,50,50,0.15);
+    margin-top: 20px;
+  }
+  
+  input[type="submit"]:hover {
+    -webkit-box-shadow: -10px 10px 0px rgba(50,50,50,0.15);
+    -moz-box-shadow: -10px 10px 0px rgba(50,50,50,0.15);
+    box-shadow: -10px 10px 0px rgba(50,50,50,0.15);
+    background-color: #1e1e1e;
+  }
+ 
