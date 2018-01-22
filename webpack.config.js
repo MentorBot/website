@@ -1,12 +1,12 @@
-const path = require('path');
+let path = require('path');
 
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
+let HtmlWebpackPlugin = require('html-webpack-plugin');
+let HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
   template: './src/index.html',
   filename: 'index.html',
   inject: 'body'
-})
-const OpenBrowserPlugin = require('open-browser-webpack-plugin');
+});
+let OpenBrowserPlugin = require('open-browser-webpack-plugin');
 module.exports = {
   entry: './src/index.js',
   output: {
