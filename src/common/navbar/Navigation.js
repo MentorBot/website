@@ -18,15 +18,16 @@ class Navigation extends Component {
         
     };
     openModal = (name) => { 
+        
         const  modalIsOpen = this.state.modalIsOpen;
-        console.log('name',name);
-        console.log('modalisopen', this.state.modalIsOpen);
         modalIsOpen[name] = true;
         this.setState(modalIsOpen);
-        alert(JSON.stringify(this.state))
+    
     }
-    closeModal = () => {
-        this.setState({modalIsOpen: false});
+    closeModal = (name) => {
+        const  modalIsOpen = this.state.modalIsOpen;
+        modalIsOpen[name] = false;
+        this.setState(modalIsOpen)
     }
     
     afterOpenModal = () => {
@@ -41,20 +42,20 @@ class Navigation extends Component {
                     <li ><a onClick={()=>this.openModal('mentor')}>TOP MENTORS</a><Mentors
                         modalIsOpen={this.state.modalIsOpen}
                         afterOpenModal={this.afterOpenModal}
-                        closeModal={this.closeModal}
+                        closeModal={() => this.closeModal('mentor')}
                         openModal={this.state.modalIsOpen.mentor}
                     /></li>
-                    <li><a onClick={()=>this.openModal()}>CONTACT US</a><Contact
+                    <li><a onClick={()=>this.openModal('contact')}>CONTACT US</a><Contact
                         modalIsOpen={this.state.modalIsOpen}
                         afterOpenModal={this.afterOpenModal}
-                        closeModal={this.closeModal}
+                        closeModal={() => this.closeModal('contact')}
                         openModal={this.state.modalIsOpen.contact}
                     />
                     </li>
-                    <li><a onClick={()=>this.openModal()}>ABOUT</a><About
+                    <li><a onClick={()=>this.openModal('about')}>ABOUT</a><About
                         modalIsOpen={this.state.modalIsOpen}
                         afterOpenModal={this.afterOpenModal}
-                        closeModal={this.closeModal}
+                        closeModal={() =>this.closeModal('about')}
                         openModal={this.state.modalIsOpen.about}
                     />
                     </li>

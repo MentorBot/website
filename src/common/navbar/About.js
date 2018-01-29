@@ -15,7 +15,6 @@ const customStyles = {
 };
 
 const About = (props) => {
-    console.log("About props\n\n", props)
 
 return (
     <div>
@@ -23,11 +22,12 @@ return (
    {/* <ul><li></li></ul> */}
   
     <Modal
-        isOpen={props.modalIsOpen}
+        isOpen={props.modalIsOpen.about}
         onAfterOpen={props.afterOpenModal}
         onRequestClose={props.closeModal}
         style={customStyles}
         contentLabel="Example Modal"
+        ariaHideApp={false}
     >
     <h2> Who we are</h2>
 

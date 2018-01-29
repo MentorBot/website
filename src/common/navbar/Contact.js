@@ -14,17 +14,19 @@ const customStyles = {
   };
   
   const Contact = (props) => {
-      console.log("About props\n\n", props)
-  
+
   return (
       <div>
       
       <Modal
-          isOpen={props.modalIsOpen}
+          isOpen={props.modalIsOpen.contact}
           onAfterOpen={props.afterOpenModal}
           onRequestClose={props.closeModal}
           style={customStyles}
-          contentLabel="Example Modal">
+          contentLabel="Example Modal"
+          ariaHideApp={false}
+          >
+         
       </Modal>
       </div>
   );

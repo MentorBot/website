@@ -19,3 +19,8 @@ ul >li{
 
    
 }
+a,a:hover {
+    color:white;
+    cursor: pointer;
+    
+}

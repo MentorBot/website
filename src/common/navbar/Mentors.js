@@ -15,16 +15,16 @@ const customStyles = {
   };
   
   const Mentors = (props) => {
-      console.log("About props\n\n", props)
   
   return (
       <div>
       <Modal
-          isOpen={props.modalIsOpen}
+          isOpen={props.modalIsOpen.mentor}
           onAfterOpen={props.afterOpenModal}
           onRequestClose={props.closeModal}
           style={customStyles}
-          contentLabel="Example Modal">
+          contentLabel="Example Modal"
+          ariaHideApp={false}>
       </Modal>
       </div>
   );
