@@ -5,12 +5,14 @@ import './Navigation.css'
 
 const customStyles = {
   content : {
-    top                   : '30%',
+    top                   : '48%',
     left                  : '50%',
     right                 : 'auto',
     bottom                : 'auto',
     marginRight           : '-50%',
-    transform             : 'translate(-50%, -50%)'
+    transform             : 'translate(-50%, -50%)',
+    backgroundColor       : '#4b659b',
+    fontsize              : '15px'
   }
 };
 
@@ -29,12 +31,11 @@ return (
         contentLabel="Example Modal"
         ariaHideApp={false}
     >
-    <h2> Who we are</h2>
+    <h2 className='title'> Who we are</h2>
 
-        <p>
+        <p className='words'>
         Hey! I’m Brandon.I created codeburst.io and I write JavaScript 
-        tutorials <br/>and articles to help beginners better understand the 
-        inner workings of Web Development.<br/> If you have any questions 
+        tutorials and articles to help beginners better understand <br/> If you have any questions 
         about the article, leave a comment and I’ll get back to you, or
         find me on twitter @brandonmorelli.<br/> Lastly, when you’re ready 
         to really dive into Web Development, Check out the Best 
@@ -43,18 +44,13 @@ return (
         to really dive into Web Development, Check out the Best 
         Courses for Learning Full Stack Web Development  
         </p>
-        <div className="">
-        <table>
-                <tbody>
-                <tr>
-                <td><a href='#'><img  src={require('../../assets/images/twitter_logo.png')}/></a></td>
-                <td><a href='#'><img  src={require('../../assets/images/facebooklogo.jpg')}/></a></td>
-                <td><a href='#'><img  src={require('../../assets/images/emailogo.png')}/></a></td>
-                </tr>
-            </tbody>
-            
-        </table> 
-            
+        <div className="icon">
+
+        
+                <a href='#'><img  src={require('../../assets/images/twitter_logo.png')}/></a>
+                <a href='#'><img  src={require('../../assets/images/facebooklogo.jpg')}/></a>
+                <a href='#'><img  src={require('../../assets/images/emailogo.png')}/></a>
+        
         </div>
 
 

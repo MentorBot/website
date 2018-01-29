@@ -19,8 +19,33 @@ ul >li{
 
    
 }
+.title {
+    text-align: center;
+    color:whitesmoke;
+    font-size:50px;
+}
+.words{
+    font-size: 16px;
+}
+
+p {
+    color: whitesmoke;
+    margin: 30px 0px 0px 50px;
+    justify-content: flex-end;
+    
+
+}
 a,a:hover {
     color:white;
     cursor: pointer;
     
+}
+
+.icon{
+    margin-top: 10%;
+    margin-bottom: 5%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 23%;
+    margin-right: 23%;
 }
