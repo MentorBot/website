@@ -1,8 +1,26 @@
 import React, { Component } from 'react'
 import './Body.css'
+import Register from './Register'
 
 class Body extends Component {
-   
+    constructor(props) {
+        super(props);
+        this.state = {
+            modalIsOpen: false,
+            subtitleColor: '#fff'
+        }
+        
+    };
+    openModal = () => {
+        this.setState({modalIsOpen: true});
+    }
+    closeModal = () => {
+        this.setState({modalIsOpen: false});
+    }
+    
+    afterOpenModal = () => {
+        this.setState({subtitleColor: '#f00'});
+    }
     render() {
         return (
             <div>
@@ -16,14 +34,27 @@ class Body extends Component {
             </div>
             <div className="register-button">
 
-            <button >REGISTER AS MENTOR</button>
+            <button onClick={this.openModal}>REGISTER AS MENTOR</button>
+            <Register
+                        modalIsOpen={this.state.modalIsOpen}
+                        afterOpenModal={this.afterOpenModal}
+                        closeModal={this.closeModal}
+                        openModal={this.openModal}
+                    />
             </div>
             <div className="bot-images" >
                 <span className="telegram">
-                <a href='#'><img  src={require('../../assets/images/telegram.png')}/></a>
-                <a href='#'><img  src={require('../../assets/images/slack.png')}/></a>
-                <a href='#'><img  src={require('../../assets/images/messenger.jpg')}/></a>
-                <a href='#'><img  src={require('../../assets/images/twitter.png')}/></a>
+                <table>
+                <thead></thead>
+                <tbody>
+                <tr>
+                <td><a href='#'><img  src={require('../../assets/images/telegram.png')}/></a></td>
+                <td><a href='#'><img  src={require('../../assets/images/slack.png')}/></a></td>
+                <td><a href='#'><img  src={require('../../assets/images/messenger.jpg')}/></a></td>
+                <td><a href='#'><img  src={require('../../assets/images/twitter.png')}/></a></td>
+                </tr>
+                </tbody>
+                </table>
                 </span>
    
             </div>

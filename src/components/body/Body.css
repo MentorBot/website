@@ -56,9 +56,36 @@
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: cover;
-    margin-left: 5px;
+    margin-top: 50px;
+    margin-left: 10px;
+   
   }
   img{
-    width: 5rem;
-    height: 5rem;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 40px;
+    background-color: white;
   }
+  table tr td {
+    padding-left: 40px;
+    padding-bottom: 40px;
+    padding-right: 40px;
+    padding-top:40px;
+}
+.register-left{
+  float:left;
+  width: 40%;
+  height: 100%;
+  background-color: #4A649D
+}
+.register-right{
+  float:right;
+  width: 60%;
+  height: 100%;
+}
+.formcontent{
+padding-top: 5%;
+}
+ .button-align{
+   align-items: right;
+ }
