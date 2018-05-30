@@ -1,0 +1,8 @@
+{
+    "presets": ["es2015", "react"],
+    "ignore": ["third_party"],
+    "plugins":[
+        ["transform-class-properties",{"spec":true}]
+
+    ]
+}
