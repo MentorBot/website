@@ -27,24 +27,25 @@ class ChatInput extends React.Component {
 
   render() {
     return (
-      <div className="form-content">
-            <form className="chat-input" onSubmit={this.submitHandler}>
-              <input type="text"
-                onChange={this.textChangeHandler}
-                value={this.state.chatInput}
-                placeholder="Type a message..."
-                required />
-            </form>
-        <div className="ul-content">    
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-              </ul>
-        </div>      
+      <div class="chatDetails">
+      <div class="messageWrapper">
+        <div class="messages">
+          <div class="info">Start your chat</div>
+        </div>
       </div>
+      <div class="textBoxWrapper">
+        <div class="textBoxContainer">
+          <div class="textbox" contenteditable>
+            Type a message...
+          </div>
+        </div>
+        <div class="buttonGroup">
+          <button class="emojiButton"></button>
+          <button class="sendButton"></button>
+        </div>
+      </div>
+    </div>
+  
     );
   }
 }

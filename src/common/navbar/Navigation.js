@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './Navigation.css'
+import './Navigation.scss'
 import About from './About'
 import Contact from './Contact'
 import Mentors from './Mentors'
@@ -44,6 +44,7 @@ class Navigation extends Component {
                         afterOpenModal={this.afterOpenModal}
                         closeModal={() => this.closeModal('mentor')}
                         openModal={this.state.modalIsOpen.mentor}
+                        users={['bla', 'blal', 'asdfasf', 'basdf']}
                     /></li>
                     <li><a onClick={()=>this.openModal('contact')}>CONTACT US</a><Contact
                         modalIsOpen={this.state.modalIsOpen}

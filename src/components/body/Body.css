@@ -74,14 +74,14 @@
 }
 .register-left{
   float:left;
-  width: 40%;
-  height: 100%;
+  width: 20rem;
+  height: 60rem;
   background-color: #4A649D
 }
 .register-right{
   float:right;
-  width: 60%;
-  height: 100%;
+  width: 40rem;
+  height: 52.5rem;
 }
 .formcontent{
 padding-top: 5%;
@@ -89,3 +89,14 @@ padding-top: 5%;
  .button-align{
    align-items: right;
  }
+
+
+.success {
+  background-color: #4A649D !important;
+  float:right;
+ 
+}
+.default {
+  background-color: #bdbdbd !important;
+  float:right;
+}

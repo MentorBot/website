@@ -2,8 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Modal from 'react-modal';
 import { Button, FormControl, FormGroup, Label ,ControlLabel, Col, Row} from 'react-bootstrap';
+import './Body.css';
 
 const customStyles = {
+   
     content : {
       top                   : '30%',
       left                  : '50%',
@@ -13,11 +15,12 @@ const customStyles = {
       transform             : 'translate(-50%, -50%)',
       width                 :'65%',
       borderRadius         :'30px',
-      height                :'75%',
+      height                :'52.5rem',
       marginTop             : '10%',
       padding               :'0'
       
     }
+
   };
 
 class Register extends React.Component{
@@ -71,7 +74,8 @@ class Register extends React.Component{
           onAfterOpen={this.props.afterOpenModal}
           onRequestClose={this.props.closeModal}
           style={customStyles}
-          contentLabel="Example Modal">
+          contentLabel="Example Modal"
+          ariaHideApp={false}>
           <section className="register-left">
           {/* <div className="logo-wrapper">
                 <div className="logo">
@@ -90,7 +94,7 @@ class Register extends React.Component{
                         <FormControl
                                 type="text"
                                 value={this.state.name}
-                                placeholder="Enter your Name."
+                                placeholder="Enter your name."
                                 onChange={this.handleChange}
                             />
                             <FormControl.Feedback />
@@ -107,7 +111,7 @@ class Register extends React.Component{
                             <FormControl
                                     type="number"
                                     value={this.state.mobile}
-                                    placeholder="Enter Mobile Number."
+                                    placeholder="Enter mobile number."
                                     onChange={this.handleChange}
                                 />
                             <FormControl.Feedback />
@@ -123,7 +127,7 @@ class Register extends React.Component{
                             <FormControl
                                     type="email"
                                     value={this.state.email}
-                                    placeholder="Enter Email Address."
+                                    placeholder="Enter email address."
                                     onChange={this.handleChange}
                                 />
                             <FormControl.Feedback />
@@ -133,7 +137,7 @@ class Register extends React.Component{
                 <FormGroup controlId="github" validationState={this.getValidationState()} bsSize="small"  className="formcontent">
                     <Row>    
                         <Col componentClass={ControlLabel} sm={2}>
-                            Github Url
+                            Github
                         </Col>
                         <Col sm={10}>
                         <FormControl
@@ -149,13 +153,14 @@ class Register extends React.Component{
                 <FormGroup controlId="facebook" validationState={this.getValidationState()} bsSize="small"  className="formcontent">
                     <Row>
                         <Col componentClass={ControlLabel} sm={2}>
-                            Facebook Url
+                            Facebook
                         </Col>
                         <Col sm={10}>
                             <FormControl
                                     type="text"
+                                    className="name"
                                     value={this.state.facebook}
-                                    placeholder="Enter Facebook Url."
+                                    placeholder="Enter facebook url."
                                     onChange={this.handleChange}
                                 />
                             <FormControl.Feedback />
@@ -165,13 +170,13 @@ class Register extends React.Component{
                 <FormGroup controlId="twitter" validationState={this.getValidationState()} bsSize="small"  className="formcontent">
                     <Row>
                         <Col componentClass={ControlLabel} sm={2}>
-                            Twitter Url
+                            Twitter
                         </Col>
                         <Col sm={10}>
                             <FormControl
                                     type="text"
                                     value={this.state.twitter}
-                                    placeholder="Enter Twitter Url."
+                                    placeholder="Enter twitter url."
                                     onChange={this.handleChange}
                                 />
                             <FormControl.Feedback />
@@ -181,13 +186,13 @@ class Register extends React.Component{
                 <FormGroup controlId="blog" validationState={this.getValidationState()} bsSize="small"  className="formcontent">
                     <Row>
                         <Col componentClass={ControlLabel} sm={2}>
-                            Blog Url
+                            Blog
                         </Col>
                         <Col sm={10}>
                             <FormControl
                                     type="text"
                                     value={this.state.blog}
-                                    placeholder="Enter Blog Url"
+                                    placeholder="Enter blog url"
                                     onChange={this.handleChange}
                                 />
                             <FormControl.Feedback />
@@ -196,10 +201,9 @@ class Register extends React.Component{
                 </FormGroup>
             <FormGroup className="button-align">
             <Row>
-                <Col  sm={10}>
-                <Button type="submit">Cancel</Button>
-                
-                <Button type="submit" bsStyle="primary">Sign Up</Button>
+                <Col sm={12}>
+                <Button type="submit" className="success">Sign Up</Button>
+                <Button type="submit" className="default">Cancel</Button>
                 </Col>
             </Row>    
              </FormGroup>
@@ -212,4 +216,5 @@ class Register extends React.Component{
 }
 
 }
+
 export default Register;

@@ -71,3 +71,170 @@
   .ul-content{
     margin-left: 1px;
   }
+  :root {
+    font-size:62.5%;
+  }
+    
+  .messagingApp {
+    height: 60rem;
+    margin-top: 10rem;
+    box-shadow: 0 0.2rem 1.2rem rgba(0, 0, 0, 0.2);
+    font-size: 1.4rem;
+    display: flex;
+    border-radius: 0.4rem;
+    overflow: hidden;
+    background: white;
+  }
+  
+  .chatList {
+    width: 30rem;
+    height: inherit;
+    background: #f9f9f9;
+  }
+  
+  .chatDetails {
+    width: 40rem;
+    height: inherit;
+    border-left: 1px solid #eee;
+  }
+  
+  .messageWrapper {
+    width: inherit;
+    height: calc(100% - 9rem);
+    overflow: auto;
+    background-image: url(https://images.unsplash.com/photo-1500497679127-316898ca0088?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=1a83413763d073224fb7fabebd7b80c6&auto=format&fit=crop&w=934&q=80);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .textBoxWrapper {
+    height: 9rem;
+    width: inherit;
+    background: #fff;
+    position: relative;
+    border-top: 1px solid #eee;
+  }
+  
+  .messages {
+    padding: 2rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: inherit;
+    min-height: 100%;
+  }
+  
+  .chat {
+    position: relative;
+    width: 70%;
+    background-color: #ddd;
+    border-radius: 0.4rem;
+    box-sizing: border-box;
+    padding: 0.8rem 1rem;
+    word-wrap: break-word;
+  }
+  
+  .chat ~ .chat {
+    margin-top: 2rem;
+  }
+  
+  .chat.me {
+    margin-left: auto;
+    background-color: #5C6BC0;
+    color: white;
+  }
+  
+  .chat::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent;
+    border-top-color: #ddd;
+    transform: skew(-45deg);
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+  
+  .chat.me::after {
+    border-top-color: #5C6BC0;
+    right: 0;
+    left: auto;
+    transform: skew(45deg);
+  }
+  
+  /* .chat:nth-child(even){
+    margin-left: auto;
+    background-color: #4e7e9a;
+    color: white;
+  }
+   */
+  .textbox {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    outline: none;
+  }
+  
+  .buttonGroup {
+    height: 4.5rem;
+    position: absolute;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+  }
+  
+  .sendButton {
+    background:blue;
+    width: 4.5rem;
+    height: inherit;
+    border-radius: 50%;
+    background: #E65100 url(https://www.materialui.co/materialIcons/content/send_white_192x192.png) no-repeat;
+    background-position: center;
+    background-size: 2.4rem;
+    border: 0;
+    cursor: pointer;
+  }
+  
+  .textBoxContainer {
+      height: calc(100% - 4rem);
+      width: calc(100% - 10rem);
+      overflow: auto;
+      box-sizing: border-box;
+      padding: 0 0 0 2rem;
+      transform: translateY(2rem);
+  }
+  
+  .emojiButton {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    border: 0;
+    background: url(https://cdn2.iconfinder.com/data/icons/picons-basic-1/57/basic1-119_smiley_neutral-512.png) no-repeat;
+    background-size: 2rem;
+    background-position: center;
+    cursor: pointer;
+  }
+  
+  .info ~ .chat,
+  .chat ~ .info {
+    margin-top: 2rem;
+  }
+  
+  .info {
+    background: #ddd;
+    width: 60%;
+    padding: 0.7rem 0;
+    border-radius: 0.4rem;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 0.8em;
+  }
+  
